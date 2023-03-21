@@ -73,3 +73,11 @@ alert(messageUnder140);
 
 or shorthand method
 alert(prompt('Enter your message').slice(0, 140));
+
+## Changing String Casing
+
+Casing - changing string to uppercase and lowercase using .toUpperCase or .toLowerCase
+
+var name = "Tag";
+name = name.toUpperCase();
+
