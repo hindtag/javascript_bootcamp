@@ -20,4 +20,9 @@ console.log(b);
 Example: myName, myNameIs and myNameIsReally
  */
 
+// Concatanation
 
+var message = 'Hello';
+var yourName = prompt('Enter your name:');
+
+alert(message + ' there, ' + yourName);
