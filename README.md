@@ -143,3 +143,30 @@ Formula:
             ' years old ' +
             'if it is converted to human age.'
     );
+
+## Incremental
+
+    x + x is x++
+    x - x is x--
+    x + x + x is x += 2
+
+## Functions
+
+A block of reusable code that performs a specific task. It is a set of instructions that are executed when the function is called or invoked.
+
+Can be defined using the function keyword:
+
+1.  creating the function
+
+        function functionName() {}
+
+2.  calling the function
+
+    functionName();
+
+Example:
+
+    function greet(name) {
+    console.log(`Hello, ${name}!`);
+    }
+    greet("John"); // Output: Hello, John!
