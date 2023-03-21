@@ -22,8 +22,11 @@ Writing variables
 
 ## Naming Conventions
 
-Using camelCase
-Example: myName, myNameIs and myNameIsReally
+Using camelCase Example:
+
+    myName
+    myNameIs
+    myNameIsReally
 
 ## Concatanation
 
@@ -74,7 +77,7 @@ Example: Prompt the first 140 character in the screen.
     or shorthand method
     alert(prompt('Enter your message').slice(0, 140));
 
-## Changing String Casing
+## Changing String Casing (uppercase or lowercase)
 
 Casing - changing string to uppercase and lowercase using .toUpperCase or .toLowerCase
 
@@ -89,10 +92,12 @@ Casing - changing string to uppercase and lowercase using .toUpperCase or .toLow
 // Challenge: Create an alert that capitalize the first character of the name of the user using prompt.
 
 Solution:
-var message = 'Hello';
 
-Step 1 create a variable that stores the name that user enters via prompt
-var yourName = prompt('What is you name?');
+    var message = 'Hello';
+
+Step 1 create a variable that stores the name that user enters via prompt.
+
+    var yourName = prompt('What is you name?');
 
 Step 2 capitalize the first letter of the name.
 
@@ -112,4 +117,29 @@ Step 2 capitalize the first letter of the name.
         var name = firstCharToUpper + restOfName;
 
 Step 3 greet them with alert
-alert(message + ' ' + name);
+
+    alert(message + ' ' + name);
+
+## Basic Arithmetic
+
+You can use +,-,\*,/ and %
+
+How old would your dog be if it was a human?
+
+// Challenge: Create dog age to human age converter:
+
+Formula:
+
+    humanAge = (dogAge -2) x 4 + 21
+
+// Solution:
+
+    var dogAge = prompt('Enter your dog age:');
+    var convertedAge = (dogAge - 2) * 4 + 21;
+
+    alert(
+        'Your dog age is ' +
+            convertedAge +
+            ' years old ' +
+            'if it is converted to human age.'
+    );
