@@ -1,3 +1,6 @@
+/* 
+// Variables //
+
 var a = 3;
 var b = 8;
 var c;
@@ -8,3 +11,13 @@ b = c;
 
 console.log(a);
 console.log(b);
+
+*/
+
+/*
+// Naming Conventions //
+ Using camelCase
+Example: myName, myNameIs and myNameIsReally
+ */
+
+
