@@ -7,6 +7,8 @@ This is my repository for learning Javascript in Bootcamps.
 
 ## Variables
 
+Writing variables
+
 var a = 3;
 var b = 8;
 var c;
@@ -50,4 +52,24 @@ message.length +
 ' characters left.'
 );
 
-##
+## Slicing character
+
+Slice - extracting parts of a string using .slice()
+
+slice(a,b)
+a is the starting and b is the ending.
+
+var city = "Legazpi"
+city.slice(0,3);
+console.log(city.slice(0, 3));
+
+you'll get "Leg"
+
+Example: Prompt the first 140 character in the screen.
+
+var message = prompt('Enter your message');
+var messageUnder140 = message.slice(0, 140);
+alert(messageUnder140);
+
+or shorthand method
+alert(prompt('Enter your message').slice(0, 140));
