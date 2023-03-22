@@ -162,11 +162,79 @@ Can be defined using the function keyword:
 
 2.  calling the function
 
-    functionName();
+            functionName();
 
-Example:
+        ### Using Parameters
 
-    function greet(name) {
-    console.log(`Hello, ${name}!`);
+        Passing a value using (parameters)
+
+            function getMilk(bottles) {
+                var cost = bottles * 1.5;
+            }
+
+        another example: Create a function that compute how many bottles can be buy with a givin budget.
+
+            function getMilk(money) {
+                var numberOfBottles = Math.floor(money / 1.5);
+
+            console.log("Buy" + numberOfBottles + " Bottles of Milk");
+            }
+
+            getMilk(4);
+
+        another example: Create a function that tell us how many days, weeks and months we have left if we live 90 years old.
+
+            function lifeInWeek(age){
+                var yearsRemaining = 90 - age;
+                var days = yearsRemaining * 365
+                var weeks = yearsRemaining * 52
+                var months = yearsRemaining * 12
+
+            console.log("You have" + days + "days, " + weeks + " weeks and" + months + " months left");
+
+            }
+
+            lifeInWeek(13);
+
+    ### Using return
+
+        Getting an output using return
+
+        function getMilk(money) {
+            var numberOfBottles = Math.floor(money / 1.5);
+
+            console.log('Buy ' + calcBottles(money, 1.5) + ' Bottles of Milk');
+
+            return money % 1.5; // Remainder
+
+        }
+
+        function calcBottles(startingMoney, costPerBottle) {
+            var numberOfBottles = Math.floor(startingMoney / costPerBottle);
+            return numberOfBottles;
+        }
+
+        var change = getMilk(4);
+        console.log('You have a change of $' + change);
+
+// Challenge: Create BMI calculator:
+
+// Solution:
+
+    function bmiCalculator(weight, height) {
+        var bmicalc = weight / (height * height);
+        return Math.round(bmicalc);
     }
-    greet("John"); // Output: Hello, John!
+    var bmicalc = bmiCalculator(65, 1.5);
+
+// same with
+
+    function bmiCalculator(weight, height) {
+        var bmi = weight / Math.pow(height, 2);
+        return Math.round(bmi);
+    }
+
+    var bmi = bmiCalculator(65, 1.5);
+
+    console.log(bmi);
+    console.log(bmicalc);
