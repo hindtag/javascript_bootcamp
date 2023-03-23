@@ -238,3 +238,73 @@ Can be defined using the function keyword:
 
     console.log(bmi);
     console.log(bmicalc);
+
+#### Random number generator
+
+    let random = Math.random();
+    random = random * 6;
+    random = Math.floor(random) + 1; // Using Pseudo to avoid 0
+    console.log(random);
+
+## Conditionals and Logic
+
+    ### If Else
+
+    Example:
+
+    prompt('Your Name');
+    prompt('Their Name');
+
+    let loveRandom = Math.random();
+    loveRandom = loveRandom \* 100;
+    loveRandom = Math.floor(loveRandom) + 1;
+
+    if (loveRandom > 70) {
+    console.log(
+    'Your love score is ' + loveRandom + '%' + ' Like God loves the world.'
+    );
+    }
+    if (loveRandom > 30 && loveRandom <= 70) {
+    console.log('Your love score is ' + loveRandom + '%' + ' Like Adam and Eve');
+    }
+    if (loveRandom <= 30) {
+    console.log('Your love score is ' + loveRandom + '%' + ' like oil and water');
+    }
+
+    Another Example:
+
+    let year = prompt('Enter the year');
+
+    function isLeap(year) {
+    if (year % 4 === 0) {
+    if (year % 100 === 0) {
+    if (year % 400 === 0) {
+    return 'leap year';
+    } else {
+    return 'Not leap year';
+    }
+    } else {
+    return 'leap year';
+    }
+    } else {
+    return 'Not leap year';
+    }
+    }
+
+## Arrays
+
+    let guestsList = ['Angela', 'Jack', 'Pam', 'James', 'Lara', 'Jason'];
+
+    let guestName = prompt('Enter your name');
+    if (guestsList.includes(guestName)) {
+    alert('Welcome');
+    } else {
+    alert('Maybe next time');
+    }
+
+    console.log('Welcome ' + guestsList[0]);
+    console.log('Welcome ' + guestsList[1]);
+    console.log('Welcome ' + guestsList[2]);
+    console.log('Welcome ' + guestsList[3]);
+    console.log('Welcome ' + guestsList[4]);
+    console.log('Welcome ' + guestsList[5]);
