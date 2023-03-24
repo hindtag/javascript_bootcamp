@@ -5,6 +5,12 @@
 
 This is my repository for learning Javascript in Bootcamps.
 
+## Things to remember
+
+Objects are always noun = person, place, thing, or idea
+Properties are adjectives = describe the object/noun
+Methods are verbs = word that expresses an action or state of being.
+
 ## Variables
 
 Writing variables
