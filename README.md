@@ -256,7 +256,7 @@ Can be defined using the function keyword:
 
     ### If Else
 
-    Example:
+    / Example:
 
     prompt('Your Name');
     prompt('Their Name');
@@ -277,7 +277,17 @@ Can be defined using the function keyword:
     console.log('Your love score is ' + loveRandom + '%' + ' like oil and water');
     }
 
-    Another Example:
+    / Another Example:
+
+    function whosPaying(names) {
+    let numberOfPeople = names.length;
+    let randomPersonPosition = Math.floor(Math.random() * numberOfPeople);
+    let randomPerson = names[randomPersonPosition];
+
+    return randomPerson + ' is going to buy lunch today!';
+    }
+
+    / Another Example:
 
     let year = prompt('Enter the year');
 
@@ -314,3 +324,41 @@ Can be defined using the function keyword:
     console.log('Welcome ' + guestsList[3]);
     console.log('Welcome ' + guestsList[4]);
     console.log('Welcome ' + guestsList[5]);
+
+    ### Challenge : FizzBuzz
+
+    let output = [];
+    let count = 1;
+
+    function fizzBuzz() {
+        while (count <= 100){
+
+        if (count % 3 === 0 && count % 5 === 0) {
+            output.push('FizzBuzz');
+        } else if (count % 3 === 0) {
+            output.push('Fizz');
+        } else if (count % 5 === 0) {
+            output.push('Buzz');
+        } else {
+            output.push(count);
+        }
+        count++;
+        console.log(output);
+    }
+    }
+
+    ### Challeng: Bottle print.
+
+    var numberOfBottles = 99
+
+    while (numberOfBottles >= 0) {
+    var bottleWord = "bottle";
+    if (numberOfBottles === 1) {
+    bottleWord = "bottles";
+    }
+    console.log(numberOfBottles + " " + bottleWord + " of beer on the wall");
+    console.log(numberOfBottles + " " + bottleWord + " of beer,");
+    console.log("Take one down, pass it around,");
+    numberOfBottles--;
+    console.log(numberOfBottles + " " + bottleWord + " of beer on the wall.");
+    }
