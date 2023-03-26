@@ -2,6 +2,7 @@
 
 - [ ] Angela Yu
 - [ ] FreeCodeCamp
+- [ ] Patterns
 
 This is my repository for learning Javascript in Bootcamps.
 
