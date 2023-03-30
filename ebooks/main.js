@@ -1,5 +1,4 @@
-let power = function (x, y) {
-	return Math.pow(x, y) + 1;
-};
-
-document.write(power(2, 10));
+setTimeout(wakeUpUser, 5000);
+function wakeUpUser() {
+	alert('Are you going to stare at this boring page forever?');
+}
