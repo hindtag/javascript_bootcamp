@@ -363,3 +363,4 @@ Can be defined using the function keyword:
     numberOfBottles--;
     console.log(numberOfBottles + " " + bottleWord + " of beer on the wall.");
     }
+
