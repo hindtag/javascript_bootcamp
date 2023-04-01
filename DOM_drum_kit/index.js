@@ -1,8 +1,15 @@
 let numberOfButton = document.querySelectorAll('.drum').length;
-let i = 0;
-while (i < numberOfButton) {
-	i++;
+
+for (let i = 0; i < numberOfButton; i++) {
 	document.querySelectorAll('.drum')[i].addEventListener('click', function () {
-		alert('I was clicked');
+		this.style.color = 'white';
 	});
 }
+
+// var audio = new Audio('sounds/tom-1.mp3');
+// audio.play()
+let housekeeper = {
+	name: 'Jeannie',
+	age: 12,
+	workOfExperience: 12,
+};

@@ -364,3 +364,170 @@ Can be defined using the function keyword:
     console.log(numberOfBottles + " " + bottleWord + " of beer on the wall.");
     }
 
+## Parts of javascript conditionals:
+
+    	1. Condition: An expression that evaluates to a boolean value (true or false).
+    	2. If statement: The if statement executes a block of code if the condition is true.
+    	3. Else statement (optional): The else statement executes a block of code if the condition is false.
+    		Example:
+    		if (condition) {
+    		// code to be executed if condition is true
+    		} else {
+    		// code to be executed if condition is false
+    		}
+
+    ## 3 Types of javascript conditionals
+    	1. If statement - used to perform an action based on a specific condition.
+    		Example:
+    			let x = 5;
+    			if (x > 0) {
+    			console.log("x is positive");
+    			}
+    		Explanation:
+    			In this example, the condition x > 0 is evaluated. If it's true, the code inside the if statement block will be executed and the message "x is positive" will be logged to the console. If the condition is false, the code inside the block will not be executed.
+
+    	2. if-else statement - used to perform different actions based on different conditions.
+    		Example:
+    			let x = 5;
+    			if (x > 0) {
+    			console.log("x is positive");
+    			} else {
+    			console.log("x is not positive");
+    			}
+    		Explanation:
+    			In this example, the condition x > 0 is evaluated. If it's true, the code inside the first block if statement will be executed and the message "x is positive" will be logged to the console. If the condition is false, the code inside the else block will be executed and the message "x is not positive" will be logged to the console.
+
+    	3. switch statement - used as an alternative to the if-else statement when multiple conditions are involved.
+    		Example:
+    			let day = 3;
+    			switch (day) {
+    			case 1:
+    				console.log("Monday");
+    				break;
+    			case 2:
+    				console.log("Tuesday");
+    				break;
+    			case 3:
+    				console.log("Wednesday");
+    				break;
+    			case 4:
+    				console.log("Thursday");
+    				break;
+    			case 5:
+    				console.log("Friday");
+    				break;
+    			default:
+    				console.log("Weekend");
+    			}
+
+    		Explanation:
+    			In this example, the variable day is given the value 3. The switch statement then evaluates the value of day and executes the code block associated with the matching case. In this case, the code block for case 3 will be executed and the message "Wednesday" will be logged to the console. The break statement at the end of each case block is used to exit the switch statement once a matching case is found, to prevent the execution of subsequent cases. The default case is used to handle values that don't match any of the specified cases.
+
+
+    	4. Ternary operator (? :) - a shorthand way to write a simple if-else statement in a single line. It's particularly useful when the expression to be evaluated is short and the actions to be taken based on the evaluation are simple.
+    		Example:
+    			let x = 5;
+    			let result = (x > 0) ? "x is positive" : "x is not positive";
+    			console.log(result);
+    		Explanation:
+    			In this example, the ternary operator ? : is used to evaluate the expression x > 0. If the expression is true, the value of result will be "x is positive". If the expression is false, the value of result will be "x is not positive". The value of result is then logged to the console.
+
+
+    ## Parts javascript loop:
+
+1.  Initialization: A starting value for the loop counter.
+2.  Condition: An expression that evaluates to a boolean value (true or false), which determines whether the loop should continue to execute.
+3.  Iteration statement: An expression that updates the loop counter after each iteration.
+4.  Loop body: The code that gets executed on each iteration of the loop.
+    Example:
+    for (initialization; condition; iteration statement) {
+    // loop body
+    }
+
+
+    ## Types of loops in JavaScript
+    	1.  for loop - used for repetitive operations a specific number of times.
+    				 - This is the most commonly used loop in JavaScript. It is used when you know the number of iterations beforehand. The loop initializes a counter, tests a condition, and increments the counter after each iteration.
+    		Example:
+    			for (let i = 0; i < 5; i++) {
+    				console.log("The value of i is: " + i);
+    			}
+
+    		Explanation:
+    			In this example, the for loop consists of three parts separated by semicolons:
+
+    			The initialization: let i = 0 - sets the starting value of the loop counter i.
+    			The condition: i < 5 - determines when the loop should terminate. In this case, the loop will continue to run as long as i is less than 5.
+    			The increment/decrement: i++ - specifies how the value of i should change after each iteration of the loop. In this case, i is incremented by 1 after each iteration.
+
+    			The loop will run 5 times, starting from i = 0 and ending at i = 4. On each iteration of the loop, the value of i will be logged to the console.
+
+    	2.  while loop - used to repeatedly execute a block of code while a condition is true.
+    				   - This loop is used when you want to repeat a block of code an unknown number of times. The loop continues executing as long as the condition is true.
+
+Example:
+let i = 0;
+while (i < 5) {
+console.log("The value of i is: " + i);
+i++;
+}
+
+    		Explanation:
+    			In this example, the while loop evaluates the condition i < 5. If the condition is true, the code inside the loop is executed. The loop will continue to run as long as i is less than 5. On each iteration of the loop, the value of i is logged to the console and then incremented by 1.
+
+    			The while loop is useful when you want to repeatedly execute a block of code while a certain condition is met. Just like with the for loop, it's important to be careful with the loop condition, as an infinite loop can occur if the condition is never false.
+
+    	3. do-while loop - similar to the while loop, but always executes the code block once and then checks the condition.
+    					 - This loop is similar to the while loop, but with a crucial difference: the code block is executed at least once, even if the condition is false.
+    		Example:
+    			let i = 1;
+    			do {
+    			console.log(i);
+    			i++;
+    			} while (i <= 10);
+
+    		Explanation:
+    			In this example, the code block inside the do statement will be executed at least once, and then the condition in the while statement will be evaluated. If the condition is true, the code block will be executed again. This process will continue until the condition becomes false.
+
+    	4. for-in loop - used to iterate over the properties of an object.
+    				   - This loop is used to iterate over the properties of an object. It is a concise and easy-to-read way to loop over object properties.
+    		Example:
+    			let person = {name: "John", age: 30, city: "New York"};
+
+    			for (let key in person) {
+    			console.log(key + ": " + person[key]);
+    			}
+
+    		Explanation:
+    			In this example, the for-in loop is used to iterate over the properties of an object. The variable key is assigned the name of each property in the object person in turn, and the value of that property can be accessed using the square bracket notation (e.g. person[key]). The loop will continue until all properties have been processed.
+
+    	5.  for-of loop - used to iterate over iterable objects such as arrays, maps, and sets.
+    					- This loop is used to iterate over iterable objects like arrays, strings, maps, sets, etc. It is a concise and easy-to-read way to loop over arrays or other iterable objects.
+    		Example:
+    			let array = [1, 2, 3, 4, 5];
+    			for (let value of array) {
+    			console.log(value);
+    			}
+
+    		Explanation:
+    			In this example, the for-of loop is used to iterate over the elements of an array. The variable value is assigned the value of each element in the array array in turn. The loop will continue until all elements have been processed.
+
+    			Note that the for-of loop is only available in JavaScript starting from ECMAScript 6 (ES6) and is not supported in older versions of JavaScript.
+
+    	Note:
+
+    		The main difference between the for-in and for-of loops in JavaScript is the type of object they can iterate over.
+
+    		The for-in loop is used to iterate over the enumerable properties of an object. It returns the keys of the object properties, not the values.
+
+    		The for-of loop is used to iterate over the values of an iterable object such as an Array, Map, Set, String, TypedArray, or any object that implements the Symbol.iterator method. It returns the values of the elements in the object.
+
+    		So, if you need to access the values of an object's properties, use the for-of loop. If you need to access both the keys and values of an object's properties, use the for-in loop.
+
+    		In JavaScript, iterable is a term used to describe objects that can be iterated, meaning that their elements can be accessed one at a time. enumerable refers to properties of an object that can be enumerated, meaning that they can be looped over.
+
+    		In JavaScript, arrays are both iterable and enumerable, while objects are only enumerable. This means that arrays can be looped over using a for...of loop and their properties can be accessed using for...in loop, while objects can only be looped over using a for...in loop.
+
+    		"iterated" refers to the process of accessing each element of a collection or data structure, one at a time, typically using a loop.
+
+    		 "enumeration" refers to the process of looping over the properties of an object or elements of a data structure and accessing their values.
