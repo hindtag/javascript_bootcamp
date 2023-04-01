@@ -376,7 +376,8 @@ Can be defined using the function keyword:
     		// code to be executed if condition is false
     		}
 
-    ## 3 Types of javascript conditionals
+## 3 Types of javascript conditionals
+
     	1. If statement - used to perform an action based on a specific condition.
     		Example:
     			let x = 5;
@@ -432,8 +433,7 @@ Can be defined using the function keyword:
     		Explanation:
     			In this example, the ternary operator ? : is used to evaluate the expression x > 0. If the expression is true, the value of result will be "x is positive". If the expression is false, the value of result will be "x is not positive". The value of result is then logged to the console.
 
-
-    ## Parts javascript loop:
+## Parts javascript loop:
 
 1.  Initialization: A starting value for the loop counter.
 2.  Condition: An expression that evaluates to a boolean value (true or false), which determines whether the loop should continue to execute.
@@ -444,33 +444,33 @@ Can be defined using the function keyword:
     // loop body
     }
 
+## Types of loops in JavaScript
 
-    ## Types of loops in JavaScript
-    	1.  for loop - used for repetitive operations a specific number of times.
-    				 - This is the most commonly used loop in JavaScript. It is used when you know the number of iterations beforehand. The loop initializes a counter, tests a condition, and increments the counter after each iteration.
-    		Example:
-    			for (let i = 0; i < 5; i++) {
-    				console.log("The value of i is: " + i);
-    			}
+        1.  for loop - used for repetitive operations a specific number of times.
+        			 - This is the most commonly used loop in JavaScript. It is used when you know the number of iterations beforehand. The loop initializes a counter, tests a condition, and increments the counter after each iteration.
+        	Example:
+        		for (let i = 0; i < 5; i++) {
+        			console.log("The value of i is: " + i);
+        		}
 
-    		Explanation:
-    			In this example, the for loop consists of three parts separated by semicolons:
+        	Explanation:
+        		In this example, the for loop consists of three parts separated by semicolons:
 
-    			The initialization: let i = 0 - sets the starting value of the loop counter i.
-    			The condition: i < 5 - determines when the loop should terminate. In this case, the loop will continue to run as long as i is less than 5.
-    			The increment/decrement: i++ - specifies how the value of i should change after each iteration of the loop. In this case, i is incremented by 1 after each iteration.
+        		The initialization: let i = 0 - sets the starting value of the loop counter i.
+        		The condition: i < 5 - determines when the loop should terminate. In this case, the loop will continue to run as long as i is less than 5.
+        		The increment/decrement: i++ - specifies how the value of i should change after each iteration of the loop. In this case, i is incremented by 1 after each iteration.
 
-    			The loop will run 5 times, starting from i = 0 and ending at i = 4. On each iteration of the loop, the value of i will be logged to the console.
+        		The loop will run 5 times, starting from i = 0 and ending at i = 4. On each iteration of the loop, the value of i will be logged to the console.
 
-    	2.  while loop - used to repeatedly execute a block of code while a condition is true.
-    				   - This loop is used when you want to repeat a block of code an unknown number of times. The loop continues executing as long as the condition is true.
+        2.  while loop - used to repeatedly execute a block of code while a condition is true.
+        			   - This loop is used when you want to repeat a block of code an unknown number of times. The loop continues executing as long as the condition is true.
 
-Example:
-let i = 0;
-while (i < 5) {
-console.log("The value of i is: " + i);
-i++;
-}
+            Example:
+            let i = 0;
+            while (i < 5) {
+            console.log("The value of i is: " + i);
+            i++;
+            }
 
     		Explanation:
     			In this example, the while loop evaluates the condition i < 5. If the condition is true, the code inside the loop is executed. The loop will continue to run as long as i is less than 5. On each iteration of the loop, the value of i is logged to the console and then incremented by 1.
@@ -531,3 +531,76 @@ i++;
     		"iterated" refers to the process of accessing each element of a collection or data structure, one at a time, typically using a loop.
 
     		 "enumeration" refers to the process of looping over the properties of an object or elements of a data structure and accessing their values.
+
+## Array Methods
+
+    .pop() - remove the last element.
+    .push() - add new element to the end of the array.
+    .shift() - remove the first element.
+    .unshift() - add new element to the beginning of the array.
+    .sort() - Arrange order alphabetically.
+    .reverse() - Arrange order descending.
+
+    Activity: Use a loop to create an array containing the numbers 11 - 23.
+
+        let numStart = 11;
+
+        let numEnd = 23;
+        let myArr = [];
+
+        for (i = numStart; i <= numEnd; i++) {
+        myArr.push(i);
+        }
+        document.write(myArr);
+
+## Functions
+
+    Activity: Make a function that converts CM to Inches. Round the result and add the inch symbol after the value
+
+        let result = cm2in;
+
+        function cm2in(x) {
+        var convert = x / 2.54;
+        return Math.round(convert) + '"';
+        }
+        document.write(cm2in(16));
+
+### Functions, parameters, arguments and return
+
+        function bake(degree) {
+        let message;
+        if (degree > 500) {
+        message = 'I am not a nuclear reactor';
+        } else if (degree < 100) {
+        message = 'I am not a fridge';
+        } else {
+        message = 'that is a good temperature';
+        }
+        return message;
+        }
+
+        let status = bake(300);
+        console.log(status);
+
+### Constructor function
+
+    function Housekeeper(name, age, workOfExperience, cleaningRoutine) {
+        this.name = name;
+        this.age = age;
+        this.workOfExperience = workOfExperience;
+        this.cleaningRoutine = cleaningRoutine;
+        this.clean = function () {
+            alert('Cleaning in progress');
+        };
+    }
+
+    let housekeeper1 = new Housekeeper('Jane', 22, 10, [
+        'bedroom',
+        'lobby',
+        'bathroom',
+    ]);
+
+    let housekeeper2 = new Housekeeper('Julie', 27, 9, ['lobby', 'bathroom']);
+
+    console.log(housekeeper1.name);
+    console.log(housekeeper2.clean());
