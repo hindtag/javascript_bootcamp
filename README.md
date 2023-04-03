@@ -477,7 +477,7 @@ Can be defined using the function keyword:
 
     			The while loop is useful when you want to repeatedly execute a block of code while a certain condition is met. Just like with the for loop, it's important to be careful with the loop condition, as an infinite loop can occur if the condition is never false.
 
-                
+
 
     	3. do-while loop - similar to the while loop, but always executes the code block once and then checks the condition.
     					 - This loop is similar to the while loop, but with a crucial difference: the code block is executed at least once, even if the condition is false.
@@ -542,6 +542,7 @@ Can be defined using the function keyword:
     .unshift() - add new element to the beginning of the array.
     .sort() - Arrange order alphabetically.
     .reverse() - Arrange order descending.
+    .length - get the index
 
     Activity: Use a loop to create an array containing the numbers 11 - 23.
 
@@ -554,6 +555,23 @@ Can be defined using the function keyword:
         myArr.push(i);
         }
         document.write(myArr);
+
+    Activity: Display all the array accordingly using .length
+
+        let scores = [
+    60, 50, 60, 58, 54, 54, 58, 50, 52, 54, 48, 69, 34, 55, 51, 52, 44, 51, 69,
+    54, 66, 55, 52, 61, 46, 31, 57, 52, 44, 18, 41, 53, 55, 61, 51, 44,
+
+        ];
+
+        let output;
+        let i = 0;
+
+        while (i < scores.length) {
+        output = 'Bubble solution # ' + i + ' score : ' + scores[i];
+        console.log(output);
+        i++;
+        }
 
 ## Functions
 
