@@ -477,6 +477,8 @@ Can be defined using the function keyword:
 
     			The while loop is useful when you want to repeatedly execute a block of code while a certain condition is met. Just like with the for loop, it's important to be careful with the loop condition, as an infinite loop can occur if the condition is never false.
 
+                
+
     	3. do-while loop - similar to the while loop, but always executes the code block once and then checks the condition.
     					 - This loop is similar to the while loop, but with a crucial difference: the code block is executed at least once, even if the condition is false.
     		Example:
