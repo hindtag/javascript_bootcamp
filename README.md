@@ -556,22 +556,36 @@ Can be defined using the function keyword:
         }
         document.write(myArr);
 
-    Activity: Display all the array accordingly using .length
+    Activity: Display bubble solutions report using array
 
         let scores = [
-    60, 50, 60, 58, 54, 54, 58, 50, 52, 54, 48, 69, 34, 55, 51, 52, 44, 51, 69,
-    54, 66, 55, 52, 61, 46, 31, 57, 52, 44, 18, 41, 53, 55, 61, 51, 44,
-
+        60, 50, 60, 58, 54, 54, 58, 50, 52, 54, 48, 69, 34, 55, 51, 52, 44, 51, 69,
+        54, 66, 55, 52, 61, 46, 31, 57, 52, 44, 18, 41, 53, 55, 61, 51, 44,
         ];
 
+        let highScore = 0;
         let output;
-        let i = 0;
 
-        while (i < scores.length) {
-        output = 'Bubble solution # ' + i + ' score : ' + scores[i];
-        console.log(output);
-        i++;
+        for (let i = 0; i < scores.length; i++) {
+            output = 'Bubble solution # ' + i + ' score : ' + scores[i];
+            console.log(output);
+            if (scores[i] > highScore) {
+                highScore = scores[i];
+            }
         }
+
+        console.log('Bubbles tests: ' + scores.length);
+        console.log('Highest bubble score: ' + highScore);
+
+        let bestSolution = [];
+
+        for (let i = 0; i < scores.length; i++) {
+            if (scores[i] == highScore) {
+                bestSolution.push(i);
+            }
+        }
+
+        console.log('solution with the highest score: ' + bestSolution);
 
 ## Functions
 
