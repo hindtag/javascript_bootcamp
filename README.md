@@ -638,3 +638,97 @@ Can be defined using the function keyword:
 
     console.log(housekeeper1.name);
     console.log(housekeeper2.clean());
+
+## Objects with functions
+
+        // Webville Motors
+
+        let taxi = {
+        make: 'Webville Motors',
+        model: 'taxi',
+        year: 1955,
+        color: 'yellow',
+        passengers: 4,
+        convertible: false,
+        mileage: 281341,
+        };
+
+        // General Motors
+        let cadi = {
+        make: 'General Motors',
+        model: 'Cadilac',
+        year: 1955,
+        color: 'tan',
+        passengers: 4,
+        convertible: false,
+        mileage: 12892,
+        };
+
+        // Prequalification function
+        function prequal(car) {
+        if (car.mileage > 10000) {
+        return false;
+        } else if (car.year > 1960) {
+        return false;
+        }
+        return true;
+        }
+
+        /_ Print to console_/
+
+        //Webville
+        let worthALook = prequal(taxi);
+
+        if (worthALook) {
+        console.log('you gotta check out this ' + taxi.make + ' ' + taxi.model);
+        } else {
+        console.log('you should really pass on the ' + taxi.make + ' ' + taxi.model);
+        }
+
+        // General Motors
+        prequal(cadi);
+        if (worthALook) {
+        console.log('you gotta check out this ' + cadi.make + ' ' + cadi.model);
+        } else {
+        console.log('you should really pass on the ' + cadi.make + ' ' + cadi.model);
+        }
+
+## Objects with array using function
+
+    /_ This code generate random car to be manufactured _/
+
+    function makeCar() {
+    let makes = ['Chevy', 'GM', 'Fiat', 'Webville Motors', 'Tucker'];
+    let models = ['Cadillac', '500', 'Bel-Air', 'Taxi', 'Torpedo'];
+    let years = [1955, 1957, 1978, 1954, 1961];
+    let colors = ['red', 'blue', 'tan', 'yellow', 'white'];
+    let convertible = [true, false];
+
+        let rand1 = Math.floor(Math.random() * makes.length);
+        let rand2 = Math.floor(Math.random() * models.length);
+        let rand3 = Math.floor(Math.random() * years.length);
+        let rand4 = Math.floor(Math.random() * colors.length);
+        let rand5 = Math.floor(Math.random() * 5) + 1;
+        let rand6 = Math.floor(Math.random() * 2);
+
+        let car = {
+            make: makes[rand1],
+            model: models[rand2],
+            year: years[rand3],
+            color: colors[rand4],
+            passengers: rand5,
+            convertible: convertible[rand6],
+            mileage: 0,
+        };
+        return car;
+
+    }
+
+    function displayCar(car) {
+    console.log(
+    'Your new car is a ' + car.year + ' ' + car.make + ' ' + car.model
+    );
+    }
+
+    let carToSell = makeCar();
+    displayCar(carToSell);
