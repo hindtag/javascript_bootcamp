@@ -17,7 +17,7 @@ let fiat = {
 	},
 
 	drive: function () {
-		if (started) {
+		if (this.started) {
 			alert('Zoom zooom!');
 		} else {
 			alert('You need to start the engine first.');
@@ -25,4 +25,7 @@ let fiat = {
 	},
 };
 
+fiat.start();
+fiat.drive();
+fiat.stop();
 fiat.drive();
