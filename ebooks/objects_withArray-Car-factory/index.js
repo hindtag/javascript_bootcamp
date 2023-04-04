@@ -28,9 +28,20 @@ function makeCar() {
 
 function displayCar(car) {
 	console.log(
-		'Your new car is a ' + car.year + ' ' + car.make + ' ' + car.model
+		'Your new car is a ' +
+			car.year +
+			' ' +
+			car.make +
+			' ' +
+			car.model +
+			' with ' +
+			car.passengers +
+			' passenger seat'
 	);
 }
 
 let carToSell = makeCar();
 displayCar(carToSell);
+
+
+// 
