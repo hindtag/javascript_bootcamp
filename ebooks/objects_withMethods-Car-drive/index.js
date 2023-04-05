@@ -10,10 +10,10 @@ let fiat = {
 	fuel: 0,
 
 	start: function () {
-		if (this.fuel > 0) {
-			this.started = true;
-		} else {
+		if (this.fuel == 0) {
 			alert('This car is on empty, fill up before starting');
+		} else {
+			this.started = true;
 		}
 	},
 
