@@ -16,5 +16,103 @@
 // }
 // window.onload = addSongs;
 
-// page 296|
-let scoop = document.getElementById('raspberry');
+// page 296 |
+// let scoop = document.getElementById('raspberry');
+
+// page 314 |
+// if ('99' == 99) {
+// 	console.log('A number is equals string');
+// } else {
+// 	console.log('Not a string');
+// }
+
+/* Page 330 */
+
+// function findCarInLot(car) {
+// 	for (var i = 0; i < lot.length; i++) {
+// 		if (car === lot[i]) {
+// 			return i;
+// 		}
+// 	}
+// 	return -1;
+// }
+
+// var chevy = {
+// 	make: 'Chevy',
+// 	model: 'Bel Air',
+// };
+
+// var taxi = {
+// 	make: 'Webville Motors',
+// 	model: 'taxi',
+// };
+
+// var fiat1 = {
+// 	make: 'Fiat',
+// 	model: '500',
+// };
+
+// var fiat2 = {
+// 	make: 'Fiat',
+// 	model: '500',
+// };
+
+// var lot = [chevy, chevy, fiat1, fiat2];
+
+// var loc1 = findCarInLot(fiat2);
+// // var loc2 = findCarInLot(taxi);
+// // var loc3 = findCarInLot(chevy);
+// // var loc4 = findCarInLot(fiat1);
+
+/* Page 333 */
+
+function lieDetectorTest() {
+	let lies = 0;
+	let stolenDiamond = {};
+
+	if (stolenDiamond) {
+		console.log('You stole the diamond');
+		lies++;
+	}
+
+	let car = {
+		keysInPocket: null,
+	};
+
+	if (car.keysInPocket) {
+		console.log('Uh oh, guess you stole the car!');
+		lies++;
+	}
+
+	let foundYouAtTheCrimeScene = [];
+
+	if (foundYouAtTheCrimeScene) {
+		console.log('A sure sign of guilt');
+		lies++;
+	}
+
+	if (foundYouAtTheCrimeScene[0]) {
+		console.log('Caught with stolen item');
+		lies++;
+	}
+
+	let yourName = ' ';
+	if (yourName) {
+		console.log('Guess, you lied about your name');
+		lies++;
+	}
+
+	return lies;
+}
+
+let numberOfLies = lieDetectorTest();
+console.log('You told ' + numberOfLies + ' lies!');
+if (numberOfLies >= 3) {
+	console.log('Guilty as charged!');
+}
+
+let text = 'YOU SHOULD NEVER SHOUT WHEN TYPING';
+let presentableText = text.toLocaleLowerCase();
+if (presentableText.length > 0) {
+	alert(presentableText);
+}
