@@ -66,53 +66,69 @@
 
 /* Page 333 */
 
-function lieDetectorTest() {
-	let lies = 0;
-	let stolenDiamond = {};
+// function lieDetectorTest() {
+// 	let lies = 0;
+// 	let stolenDiamond = {};
 
-	if (stolenDiamond) {
-		console.log('You stole the diamond');
-		lies++;
-	}
+// 	if (stolenDiamond) {
+// 		console.log('You stole the diamond');
+// 		lies++;
+// 	}
 
-	let car = {
-		keysInPocket: null,
+// 	let car = {
+// 		keysInPocket: null,
+// 	};
+
+// 	if (car.keysInPocket) {
+// 		console.log('Uh oh, guess you stole the car!');
+// 		lies++;
+// 	}
+
+// 	let foundYouAtTheCrimeScene = [];
+
+// 	if (foundYouAtTheCrimeScene) {
+// 		console.log('A sure sign of guilt');
+// 		lies++;
+// 	}
+
+// 	if (foundYouAtTheCrimeScene[0]) {
+// 		console.log('Caught with stolen item');
+// 		lies++;
+// 	}
+
+// 	let yourName = ' ';
+// 	if (yourName) {
+// 		console.log('Guess, you lied about your name');
+// 		lies++;
+// 	}
+
+// 	return lies;
+// }
+
+// let numberOfLies = lieDetectorTest();
+// console.log('You told ' + numberOfLies + ' lies!');
+// if (numberOfLies >= 3) {
+// 	console.log('Guilty as charged!');
+// }
+
+// let text = 'YOU SHOULD NEVER SHOUT WHEN TYPING';
+// let presentableText = text.toLocaleLowerCase();
+// if (presentableText.length > 0) {
+// 	alert(presentableText);
+// }
+
+/* Page 345 */
+
+function Duck(sound) {
+	this.sound = sound;
+	this.quack = function () {
+		console.log('this.sound');
 	};
-
-	if (car.keysInPocket) {
-		console.log('Uh oh, guess you stole the car!');
-		lies++;
-	}
-
-	let foundYouAtTheCrimeScene = [];
-
-	if (foundYouAtTheCrimeScene) {
-		console.log('A sure sign of guilt');
-		lies++;
-	}
-
-	if (foundYouAtTheCrimeScene[0]) {
-		console.log('Caught with stolen item');
-		lies++;
-	}
-
-	let yourName = ' ';
-	if (yourName) {
-		console.log('Guess, you lied about your name');
-		lies++;
-	}
-
-	return lies;
 }
 
-let numberOfLies = lieDetectorTest();
-console.log('You told ' + numberOfLies + ' lies!');
-if (numberOfLies >= 3) {
-	console.log('Guilty as charged!');
-}
+let toy = new Duck('Quack Quack');
 
-let text = 'YOU SHOULD NEVER SHOUT WHEN TYPING';
-let presentableText = text.toLocaleLowerCase();
-if (presentableText.length > 0) {
-	alert(presentableText);
-}
+toy.quack();
+
+console.log(typeof toy);
+console.log(toy instanceof Duck);
