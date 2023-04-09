@@ -119,16 +119,16 @@
 
 /* Page 345 */
 
-function Duck(sound) {
-	this.sound = sound;
-	this.quack = function () {
-		console.log('this.sound');
-	};
-}
+// function Duck(sound) {
+// 	this.sound = sound;
+// 	this.quack = function () {
+// 		console.log('this.sound');
+// 	};
+// }
 
-let toy = new Duck('Quack Quack');
+// let toy = new Duck('Quack Quack');
 
-toy.quack();
+// toy.quack();
 
-console.log(typeof toy);
-console.log(toy instanceof Duck);
+// console.log(typeof toy);
+// console.log(toy instanceof Duck);

@@ -106,6 +106,8 @@ var model = {
 };
 
 var view = {
+	/* This method takes a string message and display it
+	in the message display area */
 	displayMessage: function (msg) {
 		var messageArea = document.getElementById('messageArea');
 		messageArea.innerHTML = msg;
