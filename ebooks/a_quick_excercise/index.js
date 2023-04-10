@@ -132,7 +132,29 @@
 
 // console.log(typeof toy);
 // console.log(toy instanceof Duck);
-let names = ['Frod', 'Sam', 'Merry', 'Pipe'];
-for (i = 0; i < names.length; i++) {
-	console.log(names[i]);
+// let names = ['Frod', 'Sam', 'Merry', 'Pipe'];
+// for (i = 0; i < names.length; i++) {
+// 	console.log(names[i]);
+// }
+
+/* Page 426 */
+
+// window.onload = pageLoadedHandler;
+
+// function pageLoadedHandler() {
+// 	alert('I am alive');
+// }
+
+/* Page 428 */
+
+window.onload = init();
+
+function init() {
+	let image = document.getElementById('zero');
+	image.onclick = showAnswer;
+}
+
+function showAnswer() {
+	let image = document.getElementById('zero');
+	image.src = './img/zero.jpg';
 }
