@@ -132,3 +132,7 @@
 
 // console.log(typeof toy);
 // console.log(toy instanceof Duck);
+let names = ['Frod', 'Sam', 'Merry', 'Pipe'];
+for (i = 0; i < names.length; i++) {
+	console.log(names[i]);
+}
