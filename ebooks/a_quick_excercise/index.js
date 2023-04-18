@@ -161,28 +161,95 @@
 
 /* Page 480 */
 
-let winner = function () {
-	alert('Winner!');
-};
-let loser = function () {
-	alert('Loser!');
-};
+// let winner = function () {
+// 	alert('Winner!');
+// };
+// let loser = function () {
+// 	alert('Loser!');
+// };
 
-winner();
+// winner();
 
-let a = winner;
-let b = loser;
-let c = loser;
+// let a = winner;
+// let b = loser;
+// let c = loser;
 
-a();
-b();
+// a();
+// b();
 
-c = a;
-a = b;
-b = c;
-c = a;
-a = c;
-a = b;
-b = c;
+// c = a;
+// a = b;
+// b = c;
+// c = a;
+// a = c;
+// a = b;
+// b = c;
 
-a();
+// a();
+
+/* Page 483 - First class function*/
+
+let passengers = [
+	{ name: 'Jane Doloop', paid: true, ticket: 'coach' },
+	{ name: 'Dr. Evel', paid: true, ticket: 'firstclass' },
+	{ name: 'Sue Property', paid: false, ticket: 'firstclass' },
+	{ name: 'John Funcall', paid: true, ticket: 'coach' },
+];
+
+function processPassengers(passengers, testFunction) {
+	for (let i = 0; i < passengers.length; i++) {
+		if (testFunction(passengers[i])) {
+			return false;
+		}
+	}
+	return true;
+}
+
+function checkNoFlyList(passenger) {
+	return passenger.name === 'Dr. Evel';
+}
+
+function checkNotPaid(passenger) {
+	return !passenger.paid;
+}
+
+let allCanFly = processPassengers(passengers, checkNoFlyList);
+if (!allCanFly) {
+	console.log(
+		"The plane can't take off: we have a passenger on the no-fly-list"
+	);
+}
+
+let allPaid = processPassengers(passengers, checkNotPaid);
+if (!allPaid) {
+	console.log("The plane can't take off: not everyone has paid");
+}
+
+function createDrinkOrder(passenger) {
+	let orderFunction;
+	if (passenger.ticket === 'firstclass') {
+		alert('Would you like a cocktail or wine?');
+	} else {
+		alert('You choice is cola or water.');
+	}
+	return orderFunction;
+}
+
+function serveCustomer(passenger) {
+	let getDrinkOrderFunction = createDrinkOrder(passenger);
+	getDrinkOrderFunction();
+	//get dinner order
+	getDrinkOrderFunction();
+	getDrinkOrderFunction();
+	//show movie
+	getDrinkOrderFunction();
+	//get pick up trash
+}
+
+function servePassengers(passengers) {
+	for (let i = 0; i < passengers.length; i++) {
+		serveCustomer(passengers[i]);
+	}
+}
+
+servePassengers(passengers);
