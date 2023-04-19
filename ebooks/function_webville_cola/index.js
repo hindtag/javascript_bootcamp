@@ -1,3 +1,5 @@
+// This is an exmple of sorting
+
 let products = [
 	{ name: 'grapefruit', calories: 170, color: 'red', sold: 8200 },
 	{ name: 'Orange', calories: 160, color: 'orange', sold: 12101 },
@@ -8,3 +10,31 @@ let products = [
 	{ name: 'Root Beer', calories: 200, color: 'caramel', sold: 9909 },
 	{ name: 'Water', calories: 0, color: 'clear', sold: 62123 },
 ];
+
+function compareSold(colaA, colaB) {
+	if (colaA.sold > colaB.sold) {
+		return 1;
+	} else if (colaA.sold === colaB.sold) {
+		return 0;
+	} else {
+		return -1;
+	}
+}
+
+function printProducts(products) {
+	for (let i = 0; i < products.length; i++) {
+		console.log(
+			'Name: ' +
+				products[i].name +
+				', Calories: ' +
+				products[i].calories +
+				', Color: ' +
+				products[i].color +
+				', Sold: ' +
+				products[i].sold
+		);
+	}
+}
+
+products.sort(compareSold);
+printProducts(products);
