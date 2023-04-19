@@ -11,10 +11,44 @@ let products = [
 	{ name: 'Water', calories: 0, color: 'clear', sold: 62123 },
 ];
 
+// Sorting of product by sold
 function compareSold(colaA, colaB) {
 	if (colaA.sold > colaB.sold) {
 		return 1;
 	} else if (colaA.sold === colaB.sold) {
+		return 0;
+	} else {
+		return -1;
+	}
+}
+
+// Sorting of product by name
+function compareName(colaA, colaB) {
+	if (colaA.name > colaB.name) {
+		return 1;
+	} else if (colaA.name === colaB.name) {
+		return 0;
+	} else {
+		return -1;
+	}
+}
+
+// Sorting of product by calories
+function compareCalories(colaA, colaB) {
+	if (colaA.calories > colaB.calories) {
+		return 1;
+	} else if (colaA.calories === colaB.calories) {
+		return 0;
+	} else {
+		return -1;
+	}
+}
+
+// Sorting of product by color
+function compareColor(colaA, colaB) {
+	if (colaA.color > colaB.color) {
+		return 1;
+	} else if (colaA.color === colaB.color) {
 		return 0;
 	} else {
 		return -1;
@@ -36,5 +70,23 @@ function printProducts(products) {
 	}
 }
 
+// Note: kindly uncomment each print to see the difference:
+
+/* // Print sort by product sold
 products.sort(compareSold);
+printProducts(products); */
+
+// // Print sort by product name
+// products.sort(compareName);
+// console.log('Products sorted by name:');
+// printProducts(products);
+
+// // Print sort by product calories
+// products.sort(compareCalories);
+// console.log('Products sorted by name:');
+// printProducts(products);
+
+// Print sort by product color
+products.sort(compareColor);
+console.log('Products sorted by name:');
 printProducts(products);
