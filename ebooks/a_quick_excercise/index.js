@@ -264,18 +264,36 @@
 // }, 60000);
 
 /* Page 522 | Anonymous function */
-function vaccine(dosage) {
-	if (dosage > 0) {
-		inject(dosage);
-	}
-}
+// function vaccine(dosage) {
+// 	if (dosage > 0) {
+// 		inject(dosage);
+// 	}
+// }
 
-administer(
-	patient,
-	function (dosage) {
-		if (dosage > 0) {
-			inject(dosage);
-		}
-	},
-	time
-);
+// administer(
+// 	patient,
+// 	function (dosage) {
+// 		if (dosage > 0) {
+// 			inject(dosage);
+// 		}
+// 	},
+// 	time
+// );
+
+// /* Page 539 | Colsure */
+// function makeCounter() {
+// 	let count = 0;
+
+// 	function counter() {
+// 		count++;
+// 		return count;
+// 	}
+// 	return counter;
+// }
+
+// let doCount = makeCounter();
+// console.log(doCount());
+// console.log(doCount());
+// console.log(doCount());
+// console.log(doCount());
+// console.log(doCount());
