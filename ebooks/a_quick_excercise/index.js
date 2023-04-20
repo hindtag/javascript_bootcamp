@@ -189,67 +189,93 @@
 
 /* Page 483 - First class function*/
 
-let passengers = [
-	{ name: 'Jane Doloop', paid: true, ticket: 'coach' },
-	{ name: 'Dr. Evel', paid: true, ticket: 'firstclass' },
-	{ name: 'Sue Property', paid: false, ticket: 'firstclass' },
-	{ name: 'John Funcall', paid: true, ticket: 'coach' },
-];
+// let passengers = [
+// 	{ name: 'Jane Doloop', paid: true, ticket: 'coach' },
+// 	{ name: 'Dr. Evel', paid: true, ticket: 'firstclass' },
+// 	{ name: 'Sue Property', paid: false, ticket: 'firstclass' },
+// 	{ name: 'John Funcall', paid: true, ticket: 'coach' },
+// ];
 
-function processPassengers(passengers, testFunction) {
-	for (let i = 0; i < passengers.length; i++) {
-		if (testFunction(passengers[i])) {
-			return false;
+// function processPassengers(passengers, testFunction) {
+// 	for (let i = 0; i < passengers.length; i++) {
+// 		if (testFunction(passengers[i])) {
+// 			return false;
+// 		}
+// 	}
+// 	return true;
+// }
+
+// function checkNoFlyList(passenger) {
+// 	return passenger.name === 'Dr. Evel';
+// }
+
+// function checkNotPaid(passenger) {
+// 	return !passenger.paid;
+// }
+
+// let allCanFly = processPassengers(passengers, checkNoFlyList);
+// if (!allCanFly) {
+// 	console.log(
+// 		"The plane can't take off: we have a passenger on the no-fly-list"
+// 	);
+// }
+
+// let allPaid = processPassengers(passengers, checkNotPaid);
+// if (!allPaid) {
+// 	console.log("The plane can't take off: not everyone has paid");
+// }
+
+// function createDrinkOrder(passenger) {
+// 	let orderFunction;
+// 	if (passenger.ticket === 'firstclass') {
+// 		alert('Would you like a cocktail or wine?');
+// 	} else {
+// 		alert('You choice is cola or water.');
+// 	}
+// 	return orderFunction;
+// }
+
+// function serveCustomer(passenger) {
+// 	let getDrinkOrderFunction = createDrinkOrder(passenger);
+// 	getDrinkOrderFunction();
+// 	//get dinner order
+// 	getDrinkOrderFunction();
+// 	getDrinkOrderFunction();
+// 	//show movie
+// 	getDrinkOrderFunction();
+// 	//get pick up trash
+// }
+
+// function servePassengers(passengers) {
+// 	for (let i = 0; i < passengers.length; i++) {
+// 		serveCustomer(passengers[i]);
+// 	}
+// }
+
+// servePassengers(passengers);
+
+// Testing anonymous function
+// function hello() {
+// 	alert('hello');
+// }
+
+// setTimeout(function () {
+// 	alert('hello');
+// }, 60000);
+
+/* Page 522 | Anonymous function */
+function vaccine(dosage) {
+	if (dosage > 0) {
+		inject(dosage);
+	}
+}
+
+administer(
+	patient,
+	function (dosage) {
+		if (dosage > 0) {
+			inject(dosage);
 		}
-	}
-	return true;
-}
-
-function checkNoFlyList(passenger) {
-	return passenger.name === 'Dr. Evel';
-}
-
-function checkNotPaid(passenger) {
-	return !passenger.paid;
-}
-
-let allCanFly = processPassengers(passengers, checkNoFlyList);
-if (!allCanFly) {
-	console.log(
-		"The plane can't take off: we have a passenger on the no-fly-list"
-	);
-}
-
-let allPaid = processPassengers(passengers, checkNotPaid);
-if (!allPaid) {
-	console.log("The plane can't take off: not everyone has paid");
-}
-
-function createDrinkOrder(passenger) {
-	let orderFunction;
-	if (passenger.ticket === 'firstclass') {
-		alert('Would you like a cocktail or wine?');
-	} else {
-		alert('You choice is cola or water.');
-	}
-	return orderFunction;
-}
-
-function serveCustomer(passenger) {
-	let getDrinkOrderFunction = createDrinkOrder(passenger);
-	getDrinkOrderFunction();
-	//get dinner order
-	getDrinkOrderFunction();
-	getDrinkOrderFunction();
-	//show movie
-	getDrinkOrderFunction();
-	//get pick up trash
-}
-
-function servePassengers(passengers) {
-	for (let i = 0; i < passengers.length; i++) {
-		serveCustomer(passengers[i]);
-	}
-}
-
-servePassengers(passengers);
+	},
+	time
+);
