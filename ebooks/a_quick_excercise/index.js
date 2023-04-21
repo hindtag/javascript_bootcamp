@@ -324,38 +324,86 @@
 
 /* Page 576 | Constructor function excercise */
 
-function Car(
-	make,
-	model,
-	year,
-	color,
-	passengers,
-	convertible,
-	mileage,
-	started
-) {
-	this.make = make;
-	this.model = model;
-	this.year = year;
-	this.color = color;
-	this.passengers = passengers;
-	this.convertible = convertible;
-	this.mileage = mileage;
-	this.started = started;
+// function Car(
+// 	make,
+// 	model,
+// 	year,
+// 	color,
+// 	passengers,
+// 	convertible,
+// 	mileage,
+// 	started
+// ) {
+// 	this.make = make;
+// 	this.model = model;
+// 	this.year = year;
+// 	this.color = color;
+// 	this.passengers = passengers;
+// 	this.convertible = convertible;
+// 	this.mileage = mileage;
+// 	this.started = started;
 
-	this.start = function () {
-		this.started = true;
-	};
+// 	this.start = function () {
+// 		this.started = true;
+// 	};
 
-	this.stop = function () {
-		this.started = false;
-	};
+// 	this.stop = function () {
+// 		this.started = false;
+// 	};
 
-	this.drive = function () {
-		if (this.started) {
-			console.log(this.make + ' ' + this.model + ' goes zoom zoom');
+// 	this.drive = function () {
+// 		if (this.started) {
+// 			console.log(this.make + ' ' + this.model + ' goes zoom zoom');
+// 		} else {
+// 			console.log('Start the engine first');
+// 		}
+// 	};
+// }
+
+/* Page 584 */
+function dogCatcher(obj) {
+	if (obj instanceof Dog) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+function Cat(name, breed, weight) {
+	this.name = name;
+	this.breed = breed;
+	this.weight = weight;
+}
+
+let meow = new Cat('Meow', 'Siamese', 10);
+let whisker = new Cat('Whisker', 'Mixed', 12);
+
+let fido = {
+	name: 'Fido',
+	breed: 'Mixed',
+	weight: 38,
+};
+
+function Dog(name, breed, weight) {
+	this.name = name;
+	this.breed = breed;
+	this.weight = weight;
+	this.bark = function () {
+		if (this.weight > 25) {
+			alert(this.name + ' Says woof!');
 		} else {
-			console.log('Start the engine first');
+			alert(this.name + ' Says Yip!');
 		}
 	};
+}
+
+let fluffy = new Dog('Fluffy', 'Poodle', 30);
+let spot = new Dog('Spot', 'Chihuahua', 10);
+
+let dogs = [meow, whisker, fido, fluffy, spot];
+
+for (let i = 0; i < dogs.length; i++) {
+	if (dogCatcher(dogs[i])) {
+		console.log(dogs[i].name + ' is a dog!');
+	}
 }

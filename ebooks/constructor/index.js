@@ -42,32 +42,6 @@ for (let i = 0; i < dogs.length; i++) {
  */
 
 /* Car factory */
-function Car(params) {
-	this.make = params.make;
-	this.model = params.model;
-	this.year = params.year;
-	this.color = params.color;
-	this.passengers = params.passengers;
-	this.convertible = params.convertible;
-	this.mileage = params.mileage;
-	this.started = params.started;
-
-	this.start = function () {
-		this.started = true;
-	};
-
-	this.stop = function () {
-		this.started = false;
-	};
-
-	this.drive = function () {
-		if (this.started) {
-			console.log(this.make + ' ' + this.model + ' goes zoom zoom');
-		} else {
-			console.log('Start the engine first');
-		}
-	};
-}
 // | OLD | For rewired
 // let chevy = new Car('Chevy', 'Bel-air', 1957, 'red', 2, false, 1021);
 // let cadi = new Car('GM', 'Cadilac', 1955, 'tan', 5, false, 12892);
@@ -140,4 +114,39 @@ for (let i = 0; i < cars.length; i++) {
 	cars[i].drive();
 	cars[i].drive();
 	cars[i].stop();
+}
+
+function Car(params) {
+	this.make = params.make;
+	this.model = params.model;
+	this.year = params.year;
+	this.color = params.color;
+	this.passengers = params.passengers;
+	this.convertible = params.convertible;
+	this.mileage = params.mileage;
+	this.started = false;
+
+	this.start = function () {
+		this.started = true;
+	};
+
+	this.stop = function () {
+		this.started = false;
+	};
+
+	this.drive = function () {
+		if (this.started) {
+			console.log('Zoom zoom');
+		} else {
+			console.log('You need to start the engine first.');
+		}
+	};
+}
+
+// Checking the object with typeOf
+console.log(chevy.make + ' ' + chevy.model + ' is a ' + typeof chevy);
+
+// Inspecting the constructor that made an object using instanceOf
+if (cadi instanceof Car) {
+	console.log("Congrats, it's car!");
 }
