@@ -300,7 +300,24 @@
 
 /* Page 566 | Object constructors */
 
-function Duck(type, canFly) {
-	this.type = type;
-	this.canFly = canFly;
+// function Duck(type, canFly) {
+// 	this.type = type;
+// 	this.canFly = canFly;
+// }
+
+/* Page 571 | Object constructor method */
+
+function Coffee(roast, ounces) {
+	this.roast = roast;
+	this.ounces = ounces;
+	this.getSize = function () {
+		if (this.ounces === 8) {
+			return 'Small';
+		} else if (this.ounces === 12) {
+			return 'Medium';
+		} else {
+			return 'Large';
+		}
+	};
+	this.toString = function () {};
 }
