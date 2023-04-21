@@ -297,3 +297,10 @@
 // console.log(doCount());
 // console.log(doCount());
 // console.log(doCount());
+
+/* Page 566 | Object constructors */
+
+function Duck(type, canFly) {
+	this.type = type;
+	this.canFly = canFly;
+}
