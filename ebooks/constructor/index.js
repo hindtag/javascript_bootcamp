@@ -51,7 +51,7 @@ for (let i = 0; i < dogs.length; i++) {
 // let testCar = new Car('W motors', 'Test Car', 2014, 'marine', 2, true, 21);
 
 // | NEW | Rewired
-let chevyParams = {
+/* let chevyParams = {
 	make: 'Chevy',
 	model: 'Bel-air',
 	year: 1957,
@@ -150,3 +150,9 @@ console.log(chevy.make + ' ' + chevy.model + ' is a ' + typeof chevy);
 if (cadi instanceof Car) {
 	console.log("Congrats, it's car!");
 }
+ */
+
+let now = new Date();
+let dateString = now.toString();
+let theYear = now.getFullYear();
+let theDayOfWeek = now.getDay();
