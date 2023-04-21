@@ -307,17 +307,55 @@
 
 /* Page 571 | Object constructor method */
 
-function Coffee(roast, ounces) {
-	this.roast = roast;
-	this.ounces = ounces;
-	this.getSize = function () {
-		if (this.ounces === 8) {
-			return 'Small';
-		} else if (this.ounces === 12) {
-			return 'Medium';
+// function Coffee(roast, ounces) {
+// 	this.roast = roast;
+// 	this.ounces = ounces;
+// 	this.getSize = function () {
+// 		if (this.ounces === 8) {
+// 			return 'Small';
+// 		} else if (this.ounces === 12) {
+// 			return 'Medium';
+// 		} else {
+// 			return 'Large';
+// 		}
+// 	};
+// 	this.toString = function () {};
+// }
+
+/* Page 576 | Constructor function excercise */
+
+function Car(
+	make,
+	model,
+	year,
+	color,
+	passengers,
+	convertible,
+	mileage,
+	started
+) {
+	this.make = make;
+	this.model = model;
+	this.year = year;
+	this.color = color;
+	this.passengers = passengers;
+	this.convertible = convertible;
+	this.mileage = mileage;
+	this.started = started;
+
+	this.start = function () {
+		this.started = true;
+	};
+
+	this.stop = function () {
+		this.started = false;
+	};
+
+	this.drive = function () {
+		if (this.started) {
+			console.log(this.make + ' ' + this.model + ' goes zoom zoom');
 		} else {
-			return 'Large';
+			console.log('Start the engine first');
 		}
 	};
-	this.toString = function () {};
 }
