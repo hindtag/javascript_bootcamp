@@ -445,26 +445,32 @@
 // console.log(toy.toString());
 
 /* Page 661 */
-String.prototype.palindrome = function () {
-	let len = this.length - 1;
-	for (let i = 0; i <= len; i++) {
-		if (this.charAt(i) !== this.charAt(len - i)) {
-			return false;
-		}
-		if (i === len - i) {
-			return true;
-		}
-	}
-	return true;
-};
+// String.prototype.palindrome = function () {
+// 	let len = this.length - 1;
+// 	for (let i = 0; i <= len; i++) {
+// 		if (this.charAt(i) !== this.charAt(len - i)) {
+// 			return false;
+// 		}
+// 		if (i === len - i) {
+// 			return true;
+// 		}
+// 	}
+// 	return true;
+// };
 
-let phrases = ['eve', 'kayak', 'mom', 'wow', 'not a palindrome'];
+// let phrases = ['eve', 'kayak', 'mom', 'wow', 'not a palindrome'];
 
-for (let i = 0; i < phrases.length; i++) {
-	let phrase = phrases[i];
-	if (phrase.palindrome()) {
-		console.log("'" + phrase + "' is a palindrome");
-	} else {
-		console.log("'" + phrase + "' is NOT a palindrome");
-	}
+// for (let i = 0; i < phrases.length; i++) {
+// 	let phrase = phrases[i];
+// 	if (phrase.palindrome()) {
+// 		console.log("'" + phrase + "' is a palindrome");
+// 	} else {
+// 		console.log("'" + phrase + "' is NOT a palindrome");
+// 	}
+// }
+
+/* Just javascript | Page 59 */
+
+for (let i = 0; i < 7; i++) {
+	console.log(2);
 }
