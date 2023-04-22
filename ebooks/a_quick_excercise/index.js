@@ -436,3 +436,10 @@ roby.reportError();
 
 console.log(roby.hasOwnProperty('errorMessage'));
 console.log(rosie.hasOwnProperty('errorMessage'));
+
+Robot.prototype.toString = function () {
+	return this.name + ' Robot belonging to ' + this.owner;
+};
+let toy = new Robot('Toy', 2013, 'Avary');
+
+console.log(toy.toString());
