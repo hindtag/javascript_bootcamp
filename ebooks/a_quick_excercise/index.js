@@ -409,37 +409,62 @@
 // }
 
 /* Page 627 */
-function Robot(name, year, owner) {
-	this.name = name;
-	this.year = year;
-	this.owner = owner;
+// function Robot(name, year, owner) {
+// 	this.name = name;
+// 	this.year = year;
+// 	this.owner = owner;
+// }
+
+// Robot.prototype.maker = 'ObjectRUs';
+// Robot.prototype.errorMessage = 'All systems go';
+// Robot.prototype.reportError = function () {
+// 	console.log(this.name + ' says ' + this.errorMessage);
+// };
+
+// Robot.prototype.spillWater = function () {
+// 	this.errorMessage = 'I appear to have a short circuit';
+// };
+
+// let roby = new Robot('Roby', 1956, 'Dr. Morbius');
+// let rosie = new Robot('Rosie', 1962, 'George Jetson');
+
+// rosie.reportError();
+// roby.reportError();
+// roby.spillWater();
+// rosie.reportError();
+// roby.reportError();
+
+// console.log(roby.hasOwnProperty('errorMessage'));
+// console.log(rosie.hasOwnProperty('errorMessage'));
+
+// Robot.prototype.toString = function () {
+// 	return this.name + ' Robot belonging to ' + this.owner;
+// };
+// let toy = new Robot('Toy', 2013, 'Avary');
+
+// console.log(toy.toString());
+
+/* Page 661 */
+String.prototype.palindrome = function () {
+	let len = this.length - 1;
+	for (let i = 0; i <= len; i++) {
+		if (this.charAt(i) !== this.charAt(len - i)) {
+			return false;
+		}
+		if (i === len - i) {
+			return true;
+		}
+	}
+	return true;
+};
+
+let phrases = ['eve', 'kayak', 'mom', 'wow', 'not a palindrome'];
+
+for (let i = 0; i < phrases.length; i++) {
+	let phrase = phrases[i];
+	if (phrase.palindrome()) {
+		console.log("'" + phrase + "' is a palindrome");
+	} else {
+		console.log("'" + phrase + "' is NOT a palindrome");
+	}
 }
-
-Robot.prototype.maker = 'ObjectRUs';
-Robot.prototype.errorMessage = 'All systems go';
-Robot.prototype.reportError = function () {
-	console.log(this.name + ' says ' + this.errorMessage);
-};
-
-Robot.prototype.spillWater = function () {
-	this.errorMessage = 'I appear to have a short circuit';
-};
-
-let roby = new Robot('Roby', 1956, 'Dr. Morbius');
-let rosie = new Robot('Rosie', 1962, 'George Jetson');
-
-rosie.reportError();
-roby.reportError();
-roby.spillWater();
-rosie.reportError();
-roby.reportError();
-
-console.log(roby.hasOwnProperty('errorMessage'));
-console.log(rosie.hasOwnProperty('errorMessage'));
-
-Robot.prototype.toString = function () {
-	return this.name + ' Robot belonging to ' + this.owner;
-};
-let toy = new Robot('Toy', 2013, 'Avary');
-
-console.log(toy.toString());
