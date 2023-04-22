@@ -17,8 +17,20 @@ Dog.prototype.bark = function () {
 Dog.prototype.run = function () {
 	console.log('Run!');
 };
+
 Dog.prototype.wag = function () {
 	console.log('Wag!');
+};
+
+Dog.prototype.sitting = false;
+
+Dog.prototype.sit = function () {
+	if (this.sitting) {
+		console.log(this.name + ' is already sitting');
+	} else {
+		this.sitting = true;
+		console.log(this.name + ' is now sitting');
+	}
 };
 
 let fido = new Dog('Fido', 'Mixed', 38);
@@ -28,14 +40,19 @@ spot.bark = function () {
 	console.log(this.name + ' Says: BW000f!');
 };
 
-fido.bark();
-fido.run();
-fido.wag();
+// fido.bark();
+// fido.run();
+// fido.wag();
+// fido.sit();
+// fido.sit();
 
-fluffy.bark();
-fluffy.run();
-fluffy.wag();
+// fluffy.bark();
+// fluffy.run();
+// fluffy.wag();
 
-spot.bark();
-spot.run();
-spot.wag();
+// spot.bark();
+// spot.run();
+// spot.wag();
+console.log(spot.hasOwnProperty('sitting')); // False
+spot.sitting = true;
+console.log(spot.hasOwnProperty('sitting')); // true
