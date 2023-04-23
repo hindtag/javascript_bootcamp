@@ -470,7 +470,45 @@
 // }
 
 /* Just javascript | Page 59 */
-
+/* 
 for (let i = 0; i < 7; i++) {
 	console.log(2);
 }
+
+for (let i = 0; i < 7; i++) {
+	console.log({});
+}
+
+for (let i = 0; i < 7; i++) {
+	console.log(function () {});
+} */
+
+// let countDwarves = function () {
+// 	return 7;
+// };
+// let dwarves = countDwarves();
+// console.log(dwarves);
+
+/* Just javascript | Page 86 */
+// let sherlock = {
+// 	surname: 'Holmes',
+// 	age: 64,
+// };
+
+// let propertyName = prompt('What do you want to know?');
+
+// alert(sherlock[propertyName]);
+
+/* Just javascript | Page 110 */
+let human = {
+	teeth: 32,
+	hands: 2,
+};
+
+let gwen = {
+	__proto__: human,
+	age: 19,
+};
+
+console.log(gwen.teeth);
+console.log(gwen.hands);
