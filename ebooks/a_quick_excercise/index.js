@@ -500,15 +500,15 @@ for (let i = 0; i < 7; i++) {
 // alert(sherlock[propertyName]);
 
 /* Just javascript | Page 110 */
-let human = {
-	teeth: 32,
-	hands: 2,
-};
+// let human = {
+// 	teeth: 32,
+// 	hands: 2,
+// };
 
-let gwen = {
-	__proto__: human,
-	age: 19,
-};
+// let gwen = {
+// 	__proto__: human,
+// 	age: 19,
+// };
 
-console.log(gwen.teeth);
-console.log(gwen.hands);
+// console.log(gwen.teeth);
+// console.log(gwen.hands);
