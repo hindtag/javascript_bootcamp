@@ -512,3 +512,9 @@ for (let i = 0; i < 7; i++) {
 
 // console.log(gwen.teeth);
 // console.log(gwen.hands);
+
+function showPic(whichPic) {
+	let source = whichPic.getAttribute('href');
+	let placeholder = document.getElementById('placeholder');
+	placeholder.setAttribute('src', source);
+}
