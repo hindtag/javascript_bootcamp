@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quick Code</title>
+    <link rel="stylesheet" href="./main.css">
 </head>
 
 <body>
@@ -38,11 +39,14 @@
 
     <h1>Snapshots</h1>
     <ul>
-        <li><a href="./img/fireworks.jpg" title="A firworks display">Fireworks</a></li>
-        <li><a href="./img/coffee.jpg" title="A cup of black coffee">Coffee</a></li>
-        <li><a href="./img/rose.jpg" title="A red, red rose">Rose</a></li>
-        <li><a href="./img/bigben.jpg" title="The famous clock">Big Ben</a></li>
-        <img id="placeholder" src="img/Image.jpg" alt="my image gallery">
+        <li><a href="./img/fireworks.jpg" onclick="showPic(this); return false;"
+                title="A firworks display">Fireworks</a></li>
+        <li><a href="./img/coffee.jpg" onclick="showPic(this); return false;" title="A cup of black coffee">Coffee</a>
+        </li>
+        <li><a href="./img/rose.jpg" onclick="showPic(this); return false;" title="A red, red rose">Rose</a></li>
+        <li><a href="./img/bigben.jpg" onclick="showPic(this); return false;" title="The famous clock">Big Ben</a></li>
+        <img id="placeholder" src="img/Image.jpg" alt="my image gallery" width="400" height="400">
+        <p id="description">Choose an image</p>
     </ul>
 
     <script src="/ebooks/a_quick_excercise/index.js"></script>

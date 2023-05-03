@@ -513,8 +513,18 @@ for (let i = 0; i < 7; i++) {
 // console.log(gwen.teeth);
 // console.log(gwen.hands);
 
+window.onload = countBodyChildren;
+
 function showPic(whichPic) {
 	let source = whichPic.getAttribute('href');
 	let placeholder = document.getElementById('placeholder');
 	placeholder.setAttribute('src', source);
+	let text = whichPic.getAttribute('title');
+	let description = document.getElementById('description');
+	description.firstChild.nodeValue = text;
+}
+
+function countBodyChildren() {
+	let body_element = document.getElementsByTagName('body')[0];
+	alert(body_element.nodeType);
 }
