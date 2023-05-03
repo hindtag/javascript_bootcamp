@@ -513,6 +513,7 @@ for (let i = 0; i < 7; i++) {
 // console.log(gwen.teeth);
 // console.log(gwen.hands);
 
+//
 window.onload = countBodyChildren;
 
 function showPic(whichPic) {
@@ -527,4 +528,23 @@ function showPic(whichPic) {
 function countBodyChildren() {
 	let body_element = document.getElementsByTagName('body')[0];
 	alert(body_element.nodeType);
+}
+
+window.onload = preparelinks;
+
+function preparelinks() {
+	if (document.getElementsByTagName) return false;
+	let links = document.getElementsByTagName('a');
+	for (let i = 0; i < links.length; i++) {
+		if (links[i].getAttribute('class') == 'popup') {
+			links[i].onclick = function () {
+				popUp(this.getAttribute('href'));
+				return false;
+			};
+		}
+	}
+}
+
+function popUp(winURL) {
+	window.open(winURL, 'popup', 'width=320, height: =480');
 }

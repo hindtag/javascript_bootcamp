@@ -38,13 +38,20 @@
     <!-- DOM scripting | Page 61 -->
 
     <h1>Snapshots</h1>
-    <ul>
-        <li><a href="./img/fireworks.jpg" onclick="showPic(this); return false;"
-                title="A firworks display">Fireworks</a></li>
-        <li><a href="./img/coffee.jpg" onclick="showPic(this); return false;" title="A cup of black coffee">Coffee</a>
+    <ul id="imagegallery">
+        <li><a href="./img/fireworks.jpg" title="A firworks display">
+                <img src="./img/fireworks.jpg" alt="" width="50" height="50">
+            </a></li>
+        <li><a href="./img/coffee.jpg" title="A cup of black coffee">
+                <img src="./img/coffee.jpg" alt="" width="50" height="50">
+            </a>
         </li>
-        <li><a href="./img/rose.jpg" onclick="showPic(this); return false;" title="A red, red rose">Rose</a></li>
-        <li><a href="./img/bigben.jpg" onclick="showPic(this); return false;" title="The famous clock">Big Ben</a></li>
+        <li><a href="./img/rose.jpg" title="A red, red rose">
+                <img src="./img/rose.jpg" alt="" width="50" height="50">
+            </a></li>
+        <li><a href="./img/bigben.jpg" title="The famous clock">
+                <img src="./img/bigben.jpg" alt="" width="50" height="50">
+            </a></li>
         <img id="placeholder" src="img/Image.jpg" alt="my image gallery" width="400" height="400">
         <p id="description">Choose an image</p>
         <a href="http://www.example.com" class="popup">Example</a>
