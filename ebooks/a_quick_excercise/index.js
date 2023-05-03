@@ -514,37 +514,51 @@ for (let i = 0; i < 7; i++) {
 // console.log(gwen.hands);
 
 //
-window.onload = countBodyChildren;
 
-function showPic(whichPic) {
-	let source = whichPic.getAttribute('href');
-	let placeholder = document.getElementById('placeholder');
-	placeholder.setAttribute('src', source);
-	let text = whichPic.getAttribute('title');
-	let description = document.getElementById('description');
-	description.firstChild.nodeValue = text;
-}
+// DOM scripting | page 80 - 100
+// window.onload = countBodyChildren;
 
-function countBodyChildren() {
-	let body_element = document.getElementsByTagName('body')[0];
-	alert(body_element.nodeType);
-}
+// function showPic(whichPic) {
+// 	let source = whichPic.getAttribute('href');
+// 	let placeholder = document.getElementById('placeholder');
+// 	placeholder.setAttribute('src', source);
+// 	let text = whichPic.getAttribute('title');
+// 	let description = document.getElementById('description');
+// 	description.firstChild.nodeValue = text;
+// }
 
-window.onload = preparelinks;
+// function countBodyChildren() {
+// 	let body_element = document.getElementsByTagName('body')[0];
+// 	alert(body_element.nodeType);
+// }
 
-function preparelinks() {
-	if (document.getElementsByTagName) return false;
-	let links = document.getElementsByTagName('a');
-	for (let i = 0; i < links.length; i++) {
-		if (links[i].getAttribute('class') == 'popup') {
-			links[i].onclick = function () {
-				popUp(this.getAttribute('href'));
-				return false;
-			};
-		}
-	}
-}
+// window.onload = preparelinks;
 
-function popUp(winURL) {
-	window.open(winURL, 'popup', 'width=320, height: =480');
-}
+// function preparelinks() {
+// 	if (document.getElementsByTagName) return false;
+// 	let links = document.getElementsByTagName('a');
+// 	for (let i = 0; i < links.length; i++) {
+// 		if (links[i].getAttribute('class') == 'popup') {
+// 			links[i].onclick = function () {
+// 				popUp(this.getAttribute('href'));
+// 				return false;
+// 			};
+// 		}
+// 	}
+// }
+
+// function popUp(winURL) {
+// 	window.open(winURL, 'popup', 'width=320, height: =480');
+// }
+
+// DOM scripting | page 108
+// function insertParagraph(text) {
+// 	let str = '<p>';
+// 	str += text;
+// 	str += '</p>';
+// 	document.write(str);
+// }
+// window.onload = function () {
+// 	let testdiv = document.getElementById('testdiv');
+// 	testdiv.innerHTML = '<p>I inserted <em>this</em> content</p>';
+// };
